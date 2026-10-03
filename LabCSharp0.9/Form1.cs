@@ -33,8 +33,8 @@ namespace LabCSharp0._9
             if (rand.Next() % 2 == 0)
             {
                 // Draw a random rectangle
-                int x = rand.Next(0, this.pictureBox1.Width);
-                int y = rand.Next(0, this.pictureBox1.Height);
+                int x = rand.Next(0, this.Width);
+                int y = rand.Next(0, this.Height);
                 int width = rand.Next(100, 300);
                 int height = rand.Next(100, 300);
                 e.Graphics.FillRectangle(Brushes.Plum , x, y, width, height);
@@ -42,8 +42,8 @@ namespace LabCSharp0._9
             else
             {
                 // Draw a random ellipse
-                int x = rand.Next(0, this.pictureBox1.Width);
-                int y = rand.Next(0, this.pictureBox1.Height);
+                int x = rand.Next(0, this.Width);
+                int y = rand.Next(0, this.Height);
                 int width = rand.Next(100, 300);
                 int height = rand.Next(100, 300);
                 e.Graphics.FillEllipse(Brushes.Red, x, y, width, height);
