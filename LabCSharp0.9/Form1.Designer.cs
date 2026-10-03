@@ -37,9 +37,9 @@ namespace LabCSharp0._9
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(0, 1);
+            this.pictureBox1.Location = new System.Drawing.Point(120, 87);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(800, 449);
+            this.pictureBox1.Size = new System.Drawing.Size(511, 270);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 

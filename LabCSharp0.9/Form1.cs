@@ -16,31 +16,36 @@ namespace LabCSharp0._9
             InitializeComponent();
             timer = new System.Windows.Forms.Timer();
             timer.Interval = 333;
-            timer.Tick += (s, e) => this.Invalidate();
-            timer.Start();
-           
+            timer.Tick += (s, e) =>
+            {
+                
+                this.Invalidate();
+            };
             this.Paint += DrawRandomShapes;
+            timer.Start();
+            
         }
 
         private void DrawRandomShapes(object sender, PaintEventArgs e)
         {
             Random rand = new Random();
-            if(rand.Next() % 2 == 0)
+            
+            if (rand.Next() % 2 == 0)
             {
                 // Draw a random rectangle
-                int x = rand.Next(0, this.ClientSize.Width);
-                int y = rand.Next(0, this.ClientSize.Height);
-                int width = rand.Next(10, 100);
-                int height = rand.Next(10, 100);
+                int x = rand.Next(0, this.pictureBox1.Width);
+                int y = rand.Next(0, this.pictureBox1.Height);
+                int width = rand.Next(100, 300);
+                int height = rand.Next(100, 300);
                 e.Graphics.FillRectangle(Brushes.Plum , x, y, width, height);
             }
             else
             {
                 // Draw a random ellipse
-                int x = rand.Next(0, this.ClientSize.Width);
-                int y = rand.Next(0, this.ClientSize.Height);
-                int width = rand.Next(10, 100);
-                int height = rand.Next(10, 100);
+                int x = rand.Next(0, this.pictureBox1.Width);
+                int y = rand.Next(0, this.pictureBox1.Height);
+                int width = rand.Next(100, 300);
+                int height = rand.Next(100, 300);
                 e.Graphics.FillEllipse(Brushes.Red, x, y, width, height);
             }
         }
